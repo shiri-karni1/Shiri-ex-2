@@ -37,7 +37,7 @@ export default function Board() {
   }
 
   return (
-    <>
+    <body className={styles.page}>
       <div className={styles.status}>{status}</div>
       <div className={styles.boardRow}>
         <Square  squareClass={styles.square} value={squares[0]} onSquareClick={() => handleClick(0)} />
@@ -54,7 +54,7 @@ export default function Board() {
         <Square squareClass={styles.square} value={squares[7]} onSquareClick={() => handleClick(7)} />
         <Square squareClass={styles.square} value={squares[8]} onSquareClick={() => handleClick(8)} />
       </div>
-    </>
+    </body>
   );
 }
 
