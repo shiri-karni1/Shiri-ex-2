@@ -34,6 +34,11 @@ export const DEMOS = [
     description:
       "An example of a fully functional application that builds random teams and product ideas from this year's students.",
   },
+  {
+    title: "Tic Tac Toe",
+    slug: "/demos/tic-tac-toe",
+    description: "A simple Tic Tac Toe game built with React.",
+  },
 ];
 
 export const EMAIL_ADDRESS = process.env.EMAIL_ADDRESS || "";
