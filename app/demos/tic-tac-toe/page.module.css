@@ -12,3 +12,14 @@
   margin: 0;
   padding: 0;
 }
+
+.boardRow {
+  display: flex;
+}
+
+.status {
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+
