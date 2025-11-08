@@ -1,7 +1,6 @@
 "use client";
+import styles from "app\demos\tic-tac-toe\page.module.css";
 import { useState } from "react";
-import styles from "./page.module.css";
-
 
 function Square({value, onSquareClick}) {
   return (
