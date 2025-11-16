@@ -2,11 +2,17 @@
 import styles from "./page.module.css";
 import { useState } from "react";
 
+interface SquareProps {
+  value: 'X' | 'O' | null;
+  onSquareClick: () => void;
+  squareClass: string;
+}
+
 // ----------------------------------------------------
 // Square - component for each square on the board
 // ----------------------------------------------------
 
-function Square({value, onSquareClick, squareClass}) {
+function Square({ value, onSquareClick, squareClass }: SquareProps) {
   return (
     <button className={squareClass} onClick={onSquareClick}>
       {value}
@@ -72,7 +78,7 @@ export default function Board() {
   );
 }
 // determine if there's a winner
-function calculateWinner(squares) {
+function calculateWinner(squares: ('X' | 'O' | null)[]): 'X' | 'O' | null {
   const lines = [
     [0, 1, 2],
     [3, 4, 5],
@@ -82,7 +88,7 @@ function calculateWinner(squares) {
     [2, 5, 8],
     [0, 4, 8],
     [2, 4, 6],
-  ];
+    ];
   for (let i = 0; i < lines.length; i++) {
     const [a, b, c] = lines[i];
     if (squares[a] && squares[a] === squares[b] && squares[a] === squares[c]) {
