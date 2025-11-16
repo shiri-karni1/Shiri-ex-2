@@ -1,4 +1,74 @@
-@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+@font-face {
+  font-family: "fbTamlil";
+  src: url("/fonts/fbtamlil-black_2.woff") format('woff'), 
+  url("/fonts/fbtamlil-black_2.woff2") format('woff2');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "fbTamlil";
+  src: url("/fonts/fbtamlil-bold.woff") format('woff'), 
+  url("/fonts/fbtamlil-bold.woff2") format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "fbTamlil";
+  src: url("/fonts/fbtamlil-light.woff") format('woff'), 
+  url("/fonts/fbtamlil-light.woff2") format('woff2');
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "fbTamlil";
+  src: url("/fonts/fbtamlil-medium.woff") format('woff'), 
+  url("/fonts/fbtamlil-medium.woff2") format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "TheBasics";
+  src: url("/fonts/thebasics-black.woff") format('woff'), 
+  url("/fonts/thebasics-black.woff2") format('woff2');
+  font-weight: 900 strong;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "TheBasics";
+  src: url("/fonts/thebasics-bold.woff") format('woff'), 
+  url("/fonts/thebasics-bold.woff2") format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "TheBasics";
+  src: url("/fonts/thebasics-medium.woff") format('woff'), 
+  url("/fonts/thebasics-medium.woff2") format('woff2');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "TheBasics";
+  src: url("/fonts/thebasics-regular.woff") format('woff'), 
+  url("/fonts/thebasics-regular.woff2") format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
 
 .descriptionContainer {
   display: flex;
@@ -6,6 +76,7 @@
   gap: 24px;
   align-items: center;
   justify-content: flex-start;
+  padding-bottom: 10px;
 }
 
 .colorBox {
@@ -19,6 +90,7 @@
 .descriptionText{
   text-align: right;;
   font-size: 15px;
+  font-family: 'TheBasics';
   line-height: 18px;
   font-weight: 400;
   width: 70%;
@@ -29,7 +101,6 @@
   padding-top: 70px;
   padding-right: 34px;
   padding-left: 34px;
-  gap: 24px;
   display: flex;
   flex-direction: column;
   direction: rtl;
@@ -37,25 +108,26 @@
 
 .title{
   color: #507120;
-  font-family: 'Rubik', sans-serif;
-  font-size: 15px;
+  font-family: "fbTamlil";
+  font-size: 1rem;
   font-weight: 900;
   line-height: 100%;
   text-align: center;
 }
 
 .subtitle{
-  font-family: 'FB Alpha Sans', sans-serif;
-  font-size: 29px;
-  display: inline-block;
+  font-family: 'fbTamlil';
+  font-weight: 200;
+  font-size: 2rem;
+  line-height: 100%;
 }
 
-.bold{
-  font-weight: 900 !important;
-  display: inline-block;
-}
 
-.ourGoal{}
+.ourGoal{
+  font-family: 'fbTamlil';
+  font-weight:200;
+  font-size:2rem;
+}
 
 .firstBanner{
   background-color: #507120;
@@ -70,19 +142,20 @@
   flex-direction:column;
   background-color: #507120;
   width: 50%;
-  height: 365px;
+  height: 150vh;
 }
 
 .rightUp{
   display: flex;
   flex-direction: row;
   position: relative;
+  height: 50%;
 }
 
 .leftEllipse {
-  height: 206px;
-  width: 50%;
-  border-radius: 150px 150px 0 0; 
+  height: 100%;
+  width: 52%;
+  border-radius: 0 100%  100% 0; 
   background-color: #EDEFEA;
   position: absolute;
   top:0;
@@ -92,9 +165,9 @@
 }
 
 .rightEllipse {
-  height: 206px;
-  width: 155px;
-  border-radius: 0 0 150px 150px;
+  height: 100%;
+  width: 48%;
+  border-radius: 100% 0 0 100%;
   background-color: #EDEFEA;
   position: absolute;
   top:0;
@@ -102,13 +175,83 @@
   z-index: 2;
 }
 
-.rightDown{}
+.rightDown{
+  height: 50%;
+  background-color: #EDEFEA;
+  justify-content: center;
+  text-align: center;
+  position:relative;
+  font-family: 'fbTamlil';
+  font-weight: 700;
+  font-size: 2rem;
+}
 
-.left{}
+.circle {
+  background-color: #507120;
+  height: 100%;
+  width: 100%;
+  z-index: 2;
+  border-radius: 50%;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}
 
-.leftUp{}
+.left{
+  display: flex;
+  flex-direction:column;
+  background-color: #507120;
+  width: 50%;
+  height: 150vh;
+}
 
-.leftDown{}
+.leftUp{
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+
+}
+
+.ellipse {
+  height: 100%;
+  width: 100%;
+  border-radius: 100%;
+  background-color: #EDEFEA;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  color: #507120;
+  font-family: 'fbTamlil';
+  font-weight: 200;
+  font-size: 2.2rem;
+}
+
+.leftDown{
+  height: 50vh;
+  width: 100%;
+  position: relative;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin: 0;
+  padding: 0;
+}
+
+.bottomEllipse {
+  width: 100%;
+  height:100%;
+  border-radius: 0 0 100% 100%;
+  background-color: #EDEFEA;
+}
 
 .secondBanner{
   background-color: #D7F076;
@@ -120,23 +263,217 @@
   direction: rtl;
 }
 
-.audience{}
+.audience{
+  font-family: 'fbTamlil';
+  font-weight: 200;
+  font-size: 1.25rem;
+  color: #253229;
+}
 
-.split{}
+.split{
+  width: 100%;
+  height: 7px;
+  border-radius: 10px;
+  background-color: #507120;
+}
 
-.audienceDescription{}
+.audienceDescription{
+  font-family: 'TheBasics';
+  font-weight: 500;
+  font-size: 2rem;
+  color:#253229;
+}
 
-.appDescription{}
+.appDescription{
+  font-family: 'TheBasics';
+  font-weight: 400;
+  font-size:1rem;
+  color:black;
+  letter-spacing: 0%;
+  line-height:18px;
+}
 
-.finalBanner{}
+.pictureContainer {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  margin-bottom: 10px;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
 
-.finalText{}
+.pictures {
+  height: 86px;
+  width:86px;
+  transition: opacity 0.3s ease-in-out;
+}
 
-.finalTextBig{}
+.pictures:hover {
+  opacity: 0.7;
+  cursor: pointer;
+}
+
+.finalBanner{
+  height: 70vh;
+  background-color: #D7F076;
+  border-radius: 50% 50% 0 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.finalBannerTexts {
+  text-align: start;
+}
+
+.finalText{
+  font-family: 'fbTamlil';
+  font-weight: 500;
+  font-size: 2rem;
+  color: #253229;
+  text-align: start;
+}
+
+.finalTextBig{
+  font-family: 'fbTamlil';
+  font-weight: 900;
+  font-size: 4rem;
+  color: #253229;
+  line-height: 86px;
+  text-align: right;
+}
 
 .mainContainer {
   margin: 0;
   padding: 0;
   direction: rtl;
+}
+
+@media (max-width: 768px) {
+  .firstBanner{
+  background-color: #507120;
+  display: flex;
+  flex-direction: row;
+  margin: 0;
+  padding: 0;
+}
+
+.right{
+  display: flex;
+  flex-direction:column;
+  background-color: #507120;
+  width: 50%;
+  height: 70vh;
+}
+
+.rightUp{
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  height: 50%;
+}
+
+.leftEllipse {
+  height: 100%;
+  width: 52%;
+  border-radius: 0 100%  100% 0; 
+  background-color: #EDEFEA;
+  position: absolute;
+  top:0;
+  left:0;
+  z-index: 2;
+
+}
+
+.rightEllipse {
+  height: 100%;
+  width: 48%;
+  border-radius: 100% 0 0 100%;
+  background-color: #EDEFEA;
+  position: absolute;
+  top:0;
+  right:0;
+  z-index: 2;
+}
+
+.rightDown{
+  height: 50%;
+  background-color: #EDEFEA;
+  justify-content: center;
+  text-align: center;
+  position:relative;
+  font-family: 'fbTamlil';
+  font-weight: 700;
+  font-size: 2rem;
+}
+
+.circle {
+  background-color: #507120;
+  height: 100%;
+  width: 100%;
+  z-index: 2;
+  border-radius: 50%;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}
+
+.left{
+  display: flex;
+  flex-direction:column;
+  background-color: #507120;
+  width: 50%;
+  height: 70vh;
+}
+
+.leftUp{
+  width: 100%;
+  height: 40vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+
+}
+
+.ellipse {
+  height: 100%;
+  width: 100%;
+  border-radius: 100%;
+  background-color: #EDEFEA;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  color: #507120;
+  font-family: 'fbTamlil';
+  font-weight: 200;
+  font-size: 2.2rem;
+}
+
+.leftDown{
+  height: 30vh;
+  width: 100%;
+  position: relative;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin: 0;
+  padding: 0;
+}
+
+.bottomEllipse {
+  width: 100%;
+  height:100%;
+  border-radius: 0 0 100% 100%;
+  background-color: #EDEFEA;
+}
+
 }
 

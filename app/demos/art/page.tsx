@@ -1,12 +1,28 @@
 import styles from "./page.module.css";
 
 
+interface DepartmentData {
+    departmentId: number;
+    displayName: string;
+}
+
+interface ArtObject {
+    objectID: number;
+    title: string;
+    artistDisplayName: string;
+    primaryImageSmall: string | null;
+    objectDate: string;
+    artistRole: string;
+    medium: string;
+}
+
+
 // ----------------------------------------------------
 // constants -  Determines the chosen department and number of items
 // ----------------------------------------------------
 
 const DEPARTMENT_ID = "15";
-const ITEM_COUNT = 100; 
+const ITEM_COUNT = 60; 
 
 // ----------------------------------------------------
 // getArtData - function to fetch art data
@@ -115,7 +131,7 @@ export default async function ArtPage() {
     
   return (
     <main className={styles.main}>
-      <h1>The Dempartment of {departmentName}</h1>
+      <h1>The Department of {departmentName}</h1>
       <div className={styles.grid}>
         {artItems.map(art => (
           <ArtItem key={art.objectID} item={art} />
