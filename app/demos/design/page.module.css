@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+.descriptionContainer {
+  display: flex;
+  flex-direction: row;
+  gap: 24px;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.colorBox {
+  border-radius:10px;
+  width:69px;
+  height:15px;
+  justify-content: center;
+}
+
+
+.descriptionText{
+  text-align: right;;
+  font-size: 15px;
+  line-height: 18px;
+  font-weight: 400;
+  width: 70%;
+  gap:0;
+}
+
+.page{
+  padding-top: 70px;
+  padding-right: 34px;
+  padding-left: 34px;
+  gap: 24px;
+  display: flex;
+  flex-direction: column;
+  direction: rtl;
+}
+
+.title{
+  color: #507120;
+  font-family: 'Rubik', sans-serif;
+  font-size: 15px;
+  font-weight: 900;
+  line-height: 100%;
+  text-align: center;
+}
+
+.subtitle{
+  font-family: 'FB Alpha Sans', sans-serif;
+  font-size: 29px;
+  display: inline-block;
+}
+
+.bold{
+  font-weight: 900 !important;
+  display: inline-block;
+}
+
+.ourGoal{}
+
+.firstBanner{
+  background-color: #507120;
+  display: flex;
+  flex-direction: row;
+  margin: 0;
+  padding: 0;
+}
+
+.right{
+  display: flex;
+  flex-direction:column;
+  background-color: #507120;
+  width: 50%;
+  height: 365px;
+}
+
+.rightUp{
+  display: flex;
+  flex-direction: row;
+  position: relative;
+}
+
+.leftEllipse {
+  height: 206px;
+  width: 50%;
+  border-radius: 150px 150px 0 0; 
+  background-color: #EDEFEA;
+  position: absolute;
+  top:0;
+  left:0;
+  z-index: 2;
+
+}
+
+.rightEllipse {
+  height: 206px;
+  width: 155px;
+  border-radius: 0 0 150px 150px;
+  background-color: #EDEFEA;
+  position: absolute;
+  top:0;
+  right:0;
+  z-index: 2;
+}
+
+.rightDown{}
+
+.left{}
+
+.leftUp{}
+
+.leftDown{}
+
+.secondBanner{
+  background-color: #D7F076;
+  text-align: right;
+  padding-top: 10px;
+  padding-right: 34px;
+  padding-left: 34px;
+  padding-bottom: 10px;
+  direction: rtl;
+}
+
+.audience{}
+
+.split{}
+
+.audienceDescription{}
+
+.appDescription{}
+
+.finalBanner{}
+
+.finalText{}
+
+.finalTextBig{}
+
+.mainContainer {
+  margin: 0;
+  padding: 0;
+  direction: rtl;
+}
+

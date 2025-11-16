@@ -2,6 +2,10 @@
 import styles from "./page.module.css";
 import { useState } from "react";
 
+// ----------------------------------------------------
+// Square - component for each square on the board
+// ----------------------------------------------------
+
 function Square({value, onSquareClick, squareClass}) {
   return (
     <button className={squareClass} onClick={onSquareClick}>
@@ -10,10 +14,14 @@ function Square({value, onSquareClick, squareClass}) {
   );
 }
 
+// ----------------------------------------------------
+// Board - main component managing the game state
+// ----------------------------------------------------
 export default function Board() {
   const [xIsNext, setXIsNext] = useState(true);
   const [squares, setSquares] = useState(Array(9).fill(null));
 
+  // what happens when a square is clicked
   function handleClick(i) {
     if (calculateWinner(squares) || squares[i]) {
       return;
@@ -28,6 +36,8 @@ export default function Board() {
     setXIsNext(!xIsNext);
   }
 
+  // determine the status message
+
   const winner = calculateWinner(squares);
   let status;
   if (winner) {
@@ -35,29 +45,33 @@ export default function Board() {
   } else {
     status = 'Next player: ' + (xIsNext ? 'X' : 'O');
   }
-
+// render the board
   return (
-    <body className={styles.page}>
-      <div className={styles.status}>{status}</div>
-      <div className={styles.boardRow}>
-        <Square  squareClass={styles.square} value={squares[0]} onSquareClick={() => handleClick(0)} />
-        <Square squareClass={styles.square} value={squares[1]} onSquareClick={() => handleClick(1)} />
-        <Square squareClass={styles.square} value={squares[2]} onSquareClick={() => handleClick(2)} />
+    <div className={styles.mainContainer}>
+      <p className = {styles.titles}>Let's Play Tic Tac Toe!</p>
+      <div className={styles.page}>
+        <div className={styles.boardRow}>
+          <Square  squareClass={styles.square} value={squares[0]} onSquareClick={() => handleClick(0)} />
+          <Square squareClass={styles.square} value={squares[1]} onSquareClick={() => handleClick(1)} />
+          <Square squareClass={styles.square} value={squares[2]} onSquareClick={() => handleClick(2)} />
+        </div>
+        <div className={styles.boardRow}>
+          <Square squareClass={styles.square} value={squares[3]} onSquareClick={() => handleClick(3)} />
+          <Square squareClass={styles.square} value={squares[4]} onSquareClick={() => handleClick(4)} />
+          <Square squareClass={styles.square} value={squares[5]} onSquareClick={() => handleClick(5)} />
+        </div>
+        <div className={styles.boardRow}>
+          <Square squareClass={styles.square} value={squares[6]} onSquareClick={() => handleClick(6)} />
+          <Square squareClass={styles.square} value={squares[7]} onSquareClick={() => handleClick(7)} />
+          <Square squareClass={styles.square} value={squares[8]} onSquareClick={() => handleClick(8)} />
+        </div>
+        <div className={styles.status}>{status}</div>
+        <div className = {styles.refresh}> Refresh to start a new game</div>
       </div>
-      <div className={styles.boardRow}>
-        <Square squareClass={styles.square} value={squares[3]} onSquareClick={() => handleClick(3)} />
-        <Square squareClass={styles.square} value={squares[4]} onSquareClick={() => handleClick(4)} />
-        <Square squareClass={styles.square} value={squares[5]} onSquareClick={() => handleClick(5)} />
-      </div>
-      <div className={styles.boardRow}>
-        <Square squareClass={styles.square} value={squares[6]} onSquareClick={() => handleClick(6)} />
-        <Square squareClass={styles.square} value={squares[7]} onSquareClick={() => handleClick(7)} />
-        <Square squareClass={styles.square} value={squares[8]} onSquareClick={() => handleClick(8)} />
-      </div>
-    </body>
+    </div>
   );
 }
-
+// determine if there's a winner
 function calculateWinner(squares) {
   const lines = [
     [0, 1, 2],

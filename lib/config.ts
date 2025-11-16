@@ -1,4 +1,4 @@
-export const APP_NAME = "Starter Kit";
+export const APP_NAME = "Shiri's Site";
 export const COURSE_GITHUB = "https://github.com/product-jam-2025";
 export const COURSE_CREDITS = "Product Jam 2025";
 
@@ -39,6 +39,17 @@ export const DEMOS = [
     slug: "/demos/tic-tac-toe",
     description: "A simple Tic Tac Toe game built with React.",
   },
+  {
+    title: "Art Gallery",
+    slug: "/demos/art",
+    description:
+      "An example of fetching and displaying art from the Metropolitan Museum of Art's public API.",
+  },
+  {
+    title: "Design Demo",
+    slug: "/demos/design",
+    description: "A demo page showcasing design skills and layout.",
+  }
 ];
 
 export const EMAIL_ADDRESS = process.env.EMAIL_ADDRESS || "";

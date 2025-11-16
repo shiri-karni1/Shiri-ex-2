@@ -1,0 +1,75 @@
+.title {
+  width: 50%; 
+  text-align: center;
+  margin: 3% auto;
+  row-gap: 5%;
+  justify-content: center;
+  font-family: 'Trebuchet MS';
+  font-weight: 900;
+}
+
+.title h3 {
+  font-family: 'Trebuchet MS';
+  font-weight: 900;
+  margin-right: 5%;
+}
+
+.image {
+  width:100%;
+  object-fit: contain; 
+  border-radius: 20px;
+  margin: 5% auto 0 auto;
+  border: 1px solid black;
+  transition: transform 0.3s ease;
+}
+
+.image:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgb(69, 32, 97);
+}
+
+.placeholder {
+  font-family: 'Trebuchet MS';
+  width:50%;
+  justify-content: center;
+  text-align: center;
+}
+
+.details{
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-family: 'Trebuchet MS';
+  margin: 5%;
+}
+
+.main{
+  font-family: 'Trebuchet MS';
+}
+
+
+.artCard{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 2%;
+  max-height: 42%;
+  border: 1px solid black;
+  border-radius: 20px;
+  box-shadow: 0 4px 8px rgb(209, 192, 218);
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  width:100%;
+} 
+
+.imageHolder {
+  width: 50%;
+  margin: 5%; 
+  justify-content: start;
+  align-items: start;
+}
