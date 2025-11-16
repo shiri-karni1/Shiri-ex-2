@@ -9,7 +9,7 @@ export default async function Login({
 }: {
   searchParams: { message: string };
 }) {
-  const cookieStore = cookies();
+  const cookieStore = await cookies();
   const supabase = createClient(cookieStore);
   const {
     data: { user },
@@ -20,7 +20,7 @@ export default async function Login({
     "use server";
     const email = formData.get("email") as string;
     const password = formData.get("password") as string;
-    const cookieStore = cookies();
+    const cookieStore = await cookies();
     const supabase = createClient(cookieStore);
     const { error } = await supabase.auth.signInWithPassword({
       email,
@@ -37,7 +37,7 @@ export default async function Login({
     const origin: string = (await headers()).get("origin")!;
     const email = formData.get("email") as string;
     const password = formData.get("password") as string;
-    const cookieStore = cookies();
+    const cookieStore = await cookies();
     const supabase = createClient(cookieStore);
     const { error } = await supabase.auth.signUp({
       email,
