@@ -2,7 +2,7 @@ import styles from "./page.module.css";
 import Head from 'next/head';
 
 
-function description(description, color,title="") {
+function description(description:string, color:string,title:string="") {
   return (
     <div className={styles.descriptionContainer}>
       <div style={{backgroundColor: color}} className={styles.colorBox}></div>
