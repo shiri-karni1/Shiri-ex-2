@@ -28,7 +28,7 @@ export default function Board() {
   const [squares, setSquares] = useState(Array(9).fill(null));
 
   // what happens when a square is clicked
-  function handleClick(i) {
+  function handleClick(i:number) {
     if (calculateWinner(squares) || squares[i]) {
       return;
     }
