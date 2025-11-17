@@ -118,7 +118,7 @@
 .subtitle{
   font-family: 'fbTamlil';
   font-weight: 200;
-  font-size: 2rem;
+  font-size: 1.5rem;
   line-height: 100%;
 }
 
@@ -126,7 +126,13 @@
 .ourGoal{
   font-family: 'fbTamlil';
   font-weight:200;
-  font-size:2rem;
+  font-size:1.5rem;
+}
+
+.ourGoal1 {
+  font-family: 'fbTamlil';
+  font-weight:400;
+  font-size:1.5rem;
 }
 
 .firstBanner{
@@ -198,6 +204,9 @@
   justify-content: center;
   text-align: center;
   align-items: center;
+  font-size: 1rem;
+  font-family: 'fbTamlil';
+  font-weight: 700;
 }
 
 .left{
@@ -282,6 +291,7 @@
   font-weight: 500;
   font-size: 2rem;
   color:#253229;
+  line-height: 2rem;
 }
 
 .appDescription{
@@ -314,17 +324,18 @@
 }
 
 .finalBanner{
-  height: 70vh;
+  height: 60vh;
   background-color: #D7F076;
   border-radius: 50% 50% 0 0;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: end;
+  align-items: start;
   flex-direction: column;
 }
 
 .finalBannerTexts {
   text-align: start;
+  margin: 10%;
 }
 
 .finalText{
