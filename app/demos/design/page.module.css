@@ -335,7 +335,7 @@
 
 .finalBannerTexts {
   text-align: start;
-  margin: 10%;
+  margin: 15%;
 }
 
 .finalText{
@@ -375,7 +375,7 @@
   flex-direction:column;
   background-color: #507120;
   width: 50%;
-  height: 70vh;
+  height: 50vh;
 }
 
 .rightUp{
@@ -438,7 +438,7 @@
   flex-direction:column;
   background-color: #507120;
   width: 50%;
-  height: 70vh;
+  height: 50vh;
 }
 
 .leftUp{
@@ -453,7 +453,7 @@
 .ellipse {
   height: 100%;
   width: 100%;
-  border-radius: 100%;
+  border-radius: 45%;
   background-color: #EDEFEA;
   display: flex;
   flex-direction: column;
