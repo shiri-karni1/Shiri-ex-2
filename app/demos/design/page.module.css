@@ -324,7 +324,7 @@
 }
 
 .finalBanner{
-  height: 60vh;
+  height: 70vh;
   background-color: #D7F076;
   border-radius: 50% 50% 0 0;
   display: flex;
@@ -335,7 +335,7 @@
 
 .finalBannerTexts {
   text-align: start;
-  margin: 15%;
+  margin-right: 15%;
 }
 
 .finalText{
@@ -484,6 +484,16 @@
   height:100%;
   border-radius: 0 0 100% 100%;
   background-color: #EDEFEA;
+}
+
+.finalBanner{
+  height: 60vh;
+  background-color: #D7F076;
+  border-radius: 50% 50% 0 0;
+  display: flex;
+  justify-content: end;
+  align-items: start;
+  flex-direction: column;
 }
 
 }
